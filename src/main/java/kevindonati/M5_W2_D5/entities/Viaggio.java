@@ -2,6 +2,7 @@ package kevindonati.M5_W2_D5.entities;
 
 import jakarta.persistence.*;
 import kevindonati.M5_W2_D5.Enum.StatoViaggio;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,6 +18,7 @@ import java.util.UUID;
 public class Viaggio {
     @Id
     @GeneratedValue
+    @Setter(AccessLevel.NONE)
     private UUID id;
 
     @Column(nullable = false)
