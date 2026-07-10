@@ -1,7 +1,10 @@
 package kevindonati.M5_W2_D5.exceptions;
 
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
 public class ValidationException extends RuntimeException {
     private List<String> listaErrori;
 

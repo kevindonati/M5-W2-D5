@@ -30,4 +30,10 @@ public class Viaggio {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private StatoViaggio stato;
+
+    public Viaggio(String destinazione, LocalDate data, StatoViaggio stato) {
+        this.destinazione = destinazione;
+        this.data = data;
+        this.stato = stato;
+    }
 }
