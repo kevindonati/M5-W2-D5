@@ -24,6 +24,9 @@ public class Dipendente {
     private String username;
 
     @Column(nullable = false)
+    private String password;
+
+    @Column(nullable = false)
     private String nome;
 
     @Column(nullable = false)
@@ -34,11 +37,12 @@ public class Dipendente {
 
     private String immagineProfilo;
 
-    public Dipendente(String username, String nome, String cognome, String email) {
+    public Dipendente(String username, String nome, String cognome, String email, String password) {
         this.username = username;
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
+        this.password = password;
         this.immagineProfilo = "https://ui-avatars.com/api/?name=" + nome + "+" + cognome;
     }
 }

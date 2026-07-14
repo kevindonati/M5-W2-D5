@@ -41,7 +41,7 @@ public class DipendenteService {
             throw new BadRequestException("Lo username " + payload.username() + " è già in uso");
         }
 
-        Dipendente nuovoDipendente = new Dipendente(payload.username(), payload.nome(), payload.cognome(), payload.email());
+        Dipendente nuovoDipendente = new Dipendente(payload.username(), payload.nome(), payload.cognome(), payload.email(), payload.password());
         Dipendente dipendenteSalvato = dipendenteRepository.save(nuovoDipendente);
 
         log.info("Dipendente con id " + dipendenteSalvato.getId() + " salvato corretamente");
